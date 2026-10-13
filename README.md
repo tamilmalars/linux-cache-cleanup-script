@@ -96,7 +96,17 @@ The following tests have been performed:
 - Confirmed that the log records the deletion with a timestamp.
 - Confirmed that newer test files remain in the directory.
 
-## 8. Safety Considerations
+## 8. Project Output
+
+The screenshot below demonstrates the cache cleanup script's dry-run and deletion workflows in Ubuntu on WSL.
+
+- **Dry run:** Identifies eligible `.tmp` files without deleting them.
+- **Confirmed deletion:** Removes eligible files only after explicit confirmation.
+- **Verification:** Confirms that the newer test file remains untouched.
+
+![Cache Cleanup Demo](screenshots/cache-cleanup-demo.png)
+
+## 9. Safety Considerations
 
 - The default mode is dry-run.
 - Deletion requires explicit confirmation.
@@ -105,7 +115,7 @@ The following tests have been performed:
 - Application cache files, temporary files, and package-manager caches have different purposes and must not be treated as interchangeable.
 - Production use requires additional testing, error handling, and review of directory and permission safeguards.
 
-## 9. Future Improvements
+## 10. Future Improvements
 
 - Confirm the target cache directories and file types.
 - Make the retention period configurable.
@@ -115,7 +125,7 @@ The following tests have been performed:
 - Document deployment and execution on an AWS EC2 Linux instance.
 - Consider scheduled execution only after the cleanup policy is approved.
 
-## 10. Author and Project Status
+## 11. Author and Project Status
 
 **Project:** Linux Cache Cleanup Script 
 **Status:** Local prototype — initial tests completed 
