@@ -1,1 +1,4 @@
 cleanup.log
+aws-cloudshell/logs/*.log
+aws-cloudshell/test-cache/*
+!aws-cloudshell/test-cache/.gitkeep
